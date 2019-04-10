@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.services-section{
+    background-color: #333333;
+    background-size: cover;
+    padding: 60px 0;
+}   
+.services-section .inner-width{
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin:auto;
+    overflow: hidden;
+}
+.services-section .inner-width h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: #dddddd;
+    font-size: 30px;
+}
+.services-section .inner-width .border{
+    width: 180px;
+    height: 2px;
+    background-color: #82ccdd;
+    margin: 40px auto;
+}
+.services-section .inner-width .services-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.services-section .inner-width .services-container .service-box{
+    flex: 33.33%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #dddddd;
+    cursor: pointer;
+}
+.services-section .inner-width .services-container .service-box:hover .service-icon{
+    background-color: #82ccdd;
+}
+.services-section .inner-width .services-container .service-box .service-icon{
+    width: 70px;
+    height: 70px;
+    border: 3px solid#82ccdd;
+    transform: rotate(45deg);
+    margin-top: 16px;
+    margin-bottom: 30px;
+    transition: all 0.5s linear;
+}
+.services-section .inner-width .services-container .service-box .service-icon i{
+    line-height: 70px;
+    transform: rotate(-45deg);
+    font-size: 26px;
+}
+.services-section .inner-width .services-container .service-box .service-title{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+.services-section .inner-width .services-container .service-box .service-desc{
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@media screen and (max-width:960px){
+    .services-section .inner-width .services-container .service-box{
+        flex: 50%;
+    }
+}
+@media screen and (max-width:480px){
+    .services-section .inner-width .services-container .service-box{
+        flex: 100%;
+    }
+}
