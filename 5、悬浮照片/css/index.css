@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #dddddd;
+    background-size: cover;
+}
+.image{
+    width: 440px;
+    height: 300px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -220px;
+    margin-top: -150px;
+    overflow: hidden;
+}
+/* .middle{
+} */
+.image img{
+    width: 100%;
+    height: 100%;
+}
+.image .image-content{
+    width: 100%;
+    height: 100%;
+    position: absolute; /* 相对的还是.image */
+    top: 0;
+    left: 0;
+    padding: 40px;
+}
+.image .image-content h1{
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+.image:hover .image-content h1{
+    transform: translateY(-20px);
+}
+.image .image-content .icons{
+    position: absolute; /* 相对的是image-content */
+    right: 40px;
+    bottom: 40px;
+}
+.image .image-content .icons .icon{
+    color: #333333;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 0 10px;
+    transform: translateY(80px);
+}
+.image:hover .image-content .icons .icon{
+    transform: translateY(0);
+}
+.image .image-content .icons .icon:nth-child(1){
+    transition: transform 0.4s 0.05s,color 0.4s;
+}
+.image .image-content .icons .icon:nth-child(2){
+    transition: transform 0.4s 0.1s,color 0.4s;
+}
+.image .image-content .icons .icon:nth-child(3){
+    transition: transform 0.4s 0.15s,color 0.4s;
+}
+.image:hover .image-content .icons .icon:hover{
+    color: red;
+}
+
+.image .image-content::before{
+    content: 'ssss';
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, .7);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0px;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    transition: 0.4s;
+}
+.image:hover .image-content::before{
+    height: 140px;
+}
